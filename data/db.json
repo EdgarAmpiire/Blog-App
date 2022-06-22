@@ -1,0 +1,16 @@
+{
+	"blogs": [
+		{
+			"title": "The Weekend",
+			"body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus assumenda iure inventore exercitationem ex animi vero aut nisi, ipsa corrupti culpa quisquam esse quis beatae quo consectetur illo necessitatibus veritatis.",
+			"author": "Joseph Clark",
+			"id": 1
+		},
+		{
+			"title": "Birthday Girl!",
+			"body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus assumenda iure inventore exercitationem ex animi vero aut nisi, ipsa corrupti culpa quisquam esse quis beatae quo consectetur illo necessitatibus veritatis.",
+			"author": "Georgia Amanda",
+			"id": 2
+		}
+	]
+}

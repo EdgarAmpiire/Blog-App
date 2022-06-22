@@ -1,41 +1,36 @@
 /** @format */
 
-import React from "react";
+import React, { useEffect } from "react";
 import { BlogList } from "./BlogList";
 
 export function Home() {
-	const [blogs, setBlogs] = React.useState([
-		{
-			title: "Welcome Party!",
-			body: "lorem ipsum...",
-			author: "John Doe",
-			id: 1,
-		},
-		{
-			title: "Birthday Girl",
-			body: "lorem ipsum...",
-			author: "Joseph Bright",
-			id: 2,
-		},
-		{
-			title: "The Dev",
-			body: "lorem ipsum...",
-			author: "Jonthan Saxton",
-			id: 3,
-		},
-	]);
+	const [blogs, setBlogs] = React.useState(null);
 
-    const handleDelete = (id) => {
-        const newBlogs = blogs.filter((blog) => blog.id !== id);
-        setBlogs(newBlogs);
+	const [isLoading, setIsLoading] = React.useState(true)
 
-        // console.log("delete wworking")
-    }
+    // const handleDelete = (id) => {
+    //     const newBlogs = blogs.filter((blog) => blog.id !== id);
+    //     setBlogs(newBlogs);
+	// }
+	
+	useEffect(() => {
+		setTimeout(() => {
+			fetch("http://localhost:8000/blogs")
+			.then((res) => {
+				return res.json();
+			})
+			.then((data) => {
+				setBlogs(data)
+				setIsLoading(false)
+			})
+		}, 1000)
+	}, [])
 
 	return (
 		<>
 			<div className="mx-25 px-8 mt-10">
-				<BlogList blogs={blogs} title={"All Blogs!"} handleDelete={handleDelete} />
+				{isLoading && <div>Loading...</div>}
+				{blogs && <BlogList blogs={blogs} title={"All Blogs!"}  />}
 			</div>
 		</>
 	);
