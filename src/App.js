@@ -3,7 +3,7 @@ import { Home } from "./components/Home";
 import { Navbar } from "./components/Navbar";
 import {  Routes, Route } from "react-router-dom";
 import { NewBlog } from "./components/NewBlog";
-import { Blog } from "./components/Blog";
+import { BlogDetails } from "./components/BlogDetails";
 
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
 					<Routes>
 						<Route path="/" element={<Home />}/> 
 							<Route path="new-blog" index element={<NewBlog />} />
-							<Route path="blog" element={<Blog />} />
+							<Route path="blogs/:id" element={<BlogDetails />} />
 					</Routes>
  				
 			</div>
