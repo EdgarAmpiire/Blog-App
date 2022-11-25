@@ -15,7 +15,7 @@ export function Home() {
 			const json = await response.json()
 
 			if(response.ok) {
-
+				setBlogs(json)
 			}
 		}
 
