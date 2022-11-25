@@ -9,6 +9,7 @@ export function BlogDetails() {
 			<>
 				<div className="mx-25 px-8 mt-10">
                 <h1 className="text-xl text-black">Blog Details - {id} </h1>
+				
 				</div>
 			</>
 		);
