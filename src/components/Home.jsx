@@ -6,13 +6,15 @@ import ErrorIcon from "@mui/icons-material/Error";
 // import useFetch from "./useFetch";
 
 export function Home() {
-	// const {data:blogs, isLoading, error } = useFetch("http://localhost:8000/blogs");
+	// const {data:blogs, isLoading, error } = useFetch("http://localhost:4000/api/blogs");
 
 	useEffect(() => {
 		const fetchBlogs = async () => {
-			
+			const response = await fetch('http://localhost:4000/api/blogs')
 		}
-	})
+
+		fetchBlogs()
+	}, [])
  
 	return (
 		<>
@@ -24,9 +26,9 @@ export function Home() {
 						</div>
 						<div>{error}</div>
 					</div>
-				)} */}
-				{/* {isLoading && <div>Loading...</div>}
-				{blogs && <BlogList blogs={blogs} title={"All Blogs!"} />} */}
+				)}  */}
+				{/* {isLoading && <div>Loading...</div>} */}
+				{/* {blogs && <BlogList blogs={blogs} title={"All Blogs!"} />} */}
 			</div>
 		</>
 	);
