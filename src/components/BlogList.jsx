@@ -11,9 +11,9 @@ export function BlogList({ blogs, title }) {
 
 			{blogs.map((blog) => (
 				<div
-					key={blog.id}
+					key={blog._id}
 					className="p-5 mt-5  mb-3  flex flex-row items-center justify-between hover:bg-emerald-100 cursor-pointer hover:transition ">
-					<Link to={`blogs/${blog.id}`}>
+					<Link to={`blogs/${blog._id}`}>
 						<div>
 							<div className="text-xl text-emerald-500 font-semibold ">
 								{blog.title}
