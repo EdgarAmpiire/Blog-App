@@ -22,7 +22,10 @@ export function Home() {
 	// 	fetchBlogs()
 	// }, [])
 
-	
+	useEffect(() => {
+
+	}, [])
+
  
 	return (
 		<>
