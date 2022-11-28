@@ -5,7 +5,10 @@ export function BlogDetails() {
 
 	useEffect(() => {
 		const fetchBlog = async () => {
-			const 
+			const response = await fetch("/api/blogs/:id")
+			const json = await response.json()
+
+			
 		}
 
 		fetchBlog()
