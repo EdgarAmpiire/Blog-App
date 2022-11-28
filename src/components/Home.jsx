@@ -25,7 +25,7 @@ export function Home() {
 
 	useEffect(() => {
 		const fetchBlogs = async () => {
-			const response = await fetch("http://localhost:4000/api/blogs/")
+			const response = await fetch("/api/blogs")
 			const json = await response.json()
 
 			if(response.ok) {
