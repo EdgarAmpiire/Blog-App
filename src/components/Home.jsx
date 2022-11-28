@@ -23,6 +23,11 @@ export function Home() {
 	// }, [])
 
 	useEffect(() => {
+		const fetchBlogs = async () => {
+
+		}
+
+		fetchBlogs()
 
 	}, [])
 
