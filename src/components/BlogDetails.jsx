@@ -4,8 +4,12 @@ import { useParams } from 'react-router';
 export function BlogDetails() {
 
 	useEffect(() => {
-		
-	})
+		const fetchBlog = async () => {
+			const 
+		}
+
+		fetchBlog()
+	}, [])
 
     const { id } = useParams();
 
