@@ -21,11 +21,14 @@ export function Home() {
 
 	// 	fetchBlogs()
 	// }, [])
+	const [blogs, setBlogs] = useState(null)
 
 	useEffect(() => {
 		const fetchBlogs = async () => {
 			const response = await fetch("http://api/blogs/")
 			const json = await response.json()
+
+
 		}
 
 		fetchBlogs()
