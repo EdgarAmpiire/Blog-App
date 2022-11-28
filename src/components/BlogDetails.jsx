@@ -9,7 +9,7 @@ export function BlogDetails() {
 
 	useEffect(() => {
 		const fetchBlog = async () => {
-			const response = await fetch(`/api/blogs/${id}`)
+			const response = await fetch(`/api/blogs/:id`)
 			const json = await response.json()
 
 			if (response.ok){
@@ -26,6 +26,7 @@ export function BlogDetails() {
 				<div className="mx-25 px-8 mt-10">
                 <h1 className="text-xl text-black">Blog Details - {id} </h1>
 				
+			
 
 				</div>
 			</>
