@@ -21,13 +21,16 @@ export function Home() {
 
 	// 	fetchBlogs()
 	// }, [])
-	const [blogs, setBlogs] = useState(null)
+	const [blogs, setBlogs] = useState(null) 
 
 	useEffect(() => {
 		const fetchBlogs = async () => {
-			const response = await fetch("http://api/blogs/")
+			const response = await fetch("http://localhost:4000/api/blogs/")
 			const json = await response.json()
 
+			if(response.ok) {
+				setBlogs(json)
+			}
 
 		}
 
