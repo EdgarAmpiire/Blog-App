@@ -7,20 +7,22 @@ import ErrorIcon from "@mui/icons-material/Error";
 
 export function Home() {
 	// const {data:blogs, isLoading, error } = useFetch("http://localhost:4000/api/blogs");
-	const [blogs, setBlogs] = useState(null)
+	// const [blogs, setBlogs] = useState(null)
 
-	useEffect(() => {
-		const fetchBlogs = async () => {
-			const response = await fetch('/api/blogs')
-			const json = await response.json()
+	// useEffect(() => {
+	// 	const fetchBlogs = async () => {
+	// 		const response = await fetch('/api/blogs')
+	// 		const json = await response.json()
 
-			if(response.ok) {
-				setBlogs(json)
-			}
-		}
+	// 		if(response.ok) {
+	// 			setBlogs(json)
+	// 		}
+	// 	}
 
-		fetchBlogs()
-	}, [])
+	// 	fetchBlogs()
+	// }, [])
+
+	
  
 	return (
 		<>
