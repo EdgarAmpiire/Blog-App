@@ -24,7 +24,8 @@ export function Home() {
 
 	useEffect(() => {
 		const fetchBlogs = async () => {
-
+			const response = await fetch("http://api/blogs/")
+			const json = await response.json()
 		}
 
 		fetchBlogs()
